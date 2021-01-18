@@ -23,6 +23,10 @@ async def on_message(message):
     if message.author.bot:
         return None
     if message.content == ('팀 설정'):
+        global z, s, d
+        z=0
+        s=0
+        d=0
         embed = discord.Embed(title="5대5팀 설정",description="참가 하실분은 👌눌러주세요")
         aas= await message.channel.send(embed=embed)        
         await aas.add_reaction("👌")
