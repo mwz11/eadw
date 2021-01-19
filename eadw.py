@@ -304,6 +304,7 @@ async def on_reaction_add(reaction, user):
        flie = open('team.txt')
        await reaction.message.channel.send('-------------------------')
        await reaction.message.channel.send(flie.read())
+       await reaction.message.channel.send('-------------------------')
        flie.close()
        print (z,s,d)
 
