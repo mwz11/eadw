@@ -180,6 +180,7 @@ async def on_reaction_add(reaction, user):
                team.write('\t')
                team.write(str(랜덤))
                team.write('팀')
+               continue
            if s == 5:
                team.write(str(유저))
                team.write('\t')
@@ -193,6 +194,7 @@ async def on_reaction_add(reaction, user):
                team.write('\t')
                team.write(str(랜덤))
                team.write('팀')
+               continue
     if z == 8:
        team = open('team.txt','a')
        for i in range (1):
@@ -299,9 +301,6 @@ async def on_reaction_add(reaction, user):
                team.write('팀')
                continue
        team.close()
-       z=0
-       s=0
-       d=0
        flie = open('team.txt')
        await reaction.message.channel.send('-------------------------')
        await reaction.message.channel.send(flie.read())
