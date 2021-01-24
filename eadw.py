@@ -9,6 +9,7 @@ from discord.ext import commands
 
 bot = commands.Bot (command_prefix='prefix')
 
+
 z=0
 s=0
 d=0
@@ -35,9 +36,11 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+  if message.connect == ('!팀설정'):
+      await message.channel.sent('팀설정')
   if message.author.bot:
         return None
-  if message.content.startswith("!팀설정"):
+  if message.content == ("팀설정"):
       msg_l = message.content.split()
       zz = 0
       xx = 0
@@ -250,7 +253,7 @@ async def on_message(message):
           await message.channel.send('-------------------------')
           flie.close()    
       except:
-          await message.channel.send("이름을 테스트 옆에 한 명씩 띄어 적어 주세요.(10명만 적어 주세요)")
+          await message.channel.send("이름을 팀성정 옆에 10명 띄어 적어주세요(팀설정 1 2 3 ...)")
           return
 
 
