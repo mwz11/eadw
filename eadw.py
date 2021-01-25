@@ -36,11 +36,9 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-  if message.content == ('!팀설정'):
-      await message.channel.send('!를 빼주세요(팀설정)')
   if message.author.bot:
         return None
-  if message.content == ("팀설정"):
+  if message.content.startswith("!팀설정"):
       msg_l = message.content.split()
       zz = 0
       xx = 0
