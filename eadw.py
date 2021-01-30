@@ -9,7 +9,6 @@ from discord.ext import commands
 
 bot = commands.Bot (command_prefix='prefix')
 
-
 z=0
 s=0
 d=0
@@ -53,6 +52,16 @@ async def on_message(message):
       aa99 = 0
       aa1010 = 0
       try:
+          global aa1
+          global aa2
+          global aa3
+          global aa4
+          global aa5
+          global aa6
+          global aa7
+          global aa8
+          global aa9
+          global aa10
           aa1= msg_l[1]
           aa2= msg_l[2]
           aa3= msg_l[3]
@@ -251,10 +260,203 @@ async def on_message(message):
           await message.channel.send('-------------------------')
           flie.close()    
       except:
-          await message.channel.send("이름을 팀설정 옆에 10명 띄어 적어주세요(팀설정 1 2 3 ...)")
+          await message.channel.send("이름을 테스트 옆에 한 명씩 띄어 적어 주세요.(10명만 적어 주세요)")
           return
 
 
+
+
+
+  if message.content == ('팀 재설정'):
+          zz = 0
+          xx = 0
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if 랜덤 == 1:
+              zz = zz + 1
+              aa11 = 1
+          if 랜덤 == 2:
+              xx = xx + 1
+              aa11 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if 랜덤 == 1:
+              zz = zz + 1
+              aa22 = 1
+          if 랜덤 == 2:
+              xx = xx + 1
+              aa22 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if 랜덤 == 1:
+              zz = zz + 1
+              aa33 = 1
+          if 랜덤 == 2:
+              xx = xx + 1
+              aa33 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if 랜덤 == 1:
+              zz = zz + 1
+              aa44 = 1
+          if 랜덤 == 2:
+              xx = xx + 1
+              aa44 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if 랜덤 == 1:
+              zz = zz + 1
+              aa55 = 1
+          if 랜덤 == 2:
+              xx = xx + 1
+              aa55 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if zz == 5:
+              aa66 = 2
+          elif 랜덤 == 1:
+              zz = zz + 1
+              aa66 = 1
+          if xx == 5:
+              aa66 = 1
+          elif 랜덤 == 2:
+              xx = xx + 1
+              aa66 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if zz == 5:
+              aa77 = 2
+          elif 랜덤 == 1:
+              zz = zz + 1
+              aa77 = 1
+          if xx == 5:
+              aa77 = 1
+          elif 랜덤 == 2:
+              xx = xx + 1
+              aa77 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if zz == 5:
+              aa88 = 2
+          elif 랜덤 == 1:
+              zz = zz + 1
+              aa88 = 1
+          if xx == 5:
+              aa88 = 1
+          elif 랜덤 == 2:
+              xx = xx + 1
+              aa88 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if zz == 5:
+              aa99 = 2
+          elif 랜덤 == 1:
+              zz = zz + 1
+              aa99 = 1
+          if xx == 5:
+              aa99 = 1
+          elif 랜덤 == 2:
+              xx = xx + 1
+              aa99 = 2
+          팀 = [1,2]
+          랜덤 = random.choice(팀)
+          print(랜덤)
+          print(zz)
+          print(xx)
+          if zz == 5:
+              aa1010 = 2
+          elif 랜덤 == 1:
+              zz = zz + 1
+              aa1010 = 1
+          if xx == 5:
+              aa1010 = 1
+          elif 랜덤 == 2:
+              xx = xx + 1
+              aa1010 = 2
+          team = open('team.txt','w')
+          for i in range (1):
+              team.write(str(aa1))
+              team.write('\t')
+              team.write(str(aa11))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa2))
+              team.write('\t')
+              team.write(str(aa22))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa3))
+              team.write('\t')
+              team.write(str(aa33))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa4))
+              team.write('\t')
+              team.write(str(aa44))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa5))
+              team.write('\t')
+              team.write(str(aa55))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa6))
+              team.write('\t')
+              team.write(str(aa66))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa7))
+              team.write('\t')
+              team.write(str(aa77))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa8))
+              team.write('\t')
+              team.write(str(aa88))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa9))
+              team.write('\t')
+              team.write(str(aa99))
+              team.write("팀")
+              team.write('\n')
+              team.write(str(aa10))
+              team.write('\t')
+              team.write(str(aa1010))
+              team.write("팀")
+          team.close()
+          flie = open('team.txt')
+          await message.channel.send('-------------------------')
+          await message.channel.send(flie.read())
+          await message.channel.send('-------------------------')
+          flie.close() 
 
   if message.content == ('팀 설정'):
         global z, s, d
@@ -542,22 +744,4 @@ async def on_reaction_add(reaction, user):
        flie.close()
        print (z,s,d)
 
-
-        
-    
-
-
-
-    
-    
-
-     
-
-
-    
-
-      
-
-
-        
 bot.run(os.environ['token'])
