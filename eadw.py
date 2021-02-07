@@ -34,23 +34,12 @@ async def on_ready():
 
 
 @bot.event
+@bot.event
 async def on_message(message):
   if message.author.bot:
         return None
   if message.content.startswith("!팀설정"):
-      msg_l = message.content.split()
-      zz = 0
-      xx = 0
-      aa11 = 0
-      aa22 = 0
-      aa33 = 0
-      aa44 = 0
-      aa55 = 0
-      aa66 = 0
-      aa77 = 0
-      aa88 = 0
-      aa99 = 0
-      aa1010 = 0
+      aa = message.content.split()
       try:
           global aa1
           global aa2
@@ -62,401 +51,144 @@ async def on_message(message):
           global aa8
           global aa9
           global aa10
-          aa1= msg_l[1]
-          aa2= msg_l[2]
-          aa3= msg_l[3]
-          aa4= msg_l[4]
-          aa5= msg_l[5]
-          aa6= msg_l[6]
-          aa7= msg_l[7]
-          aa8= msg_l[8]
-          aa9= msg_l[9]
-          aa10= msg_l[10]
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa11 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa11 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa22 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa22 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa33 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa33 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa44 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa44 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa55 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa55 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa66 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa66 = 1
-          if xx == 5:
-              aa66 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa66 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa77 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa77 = 1
-          if xx == 5:
-              aa77 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa77 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa88 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa88 = 1
-          if xx == 5:
-              aa88 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa88 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa99 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa99 = 1
-          if xx == 5:
-              aa99 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa99 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa1010 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa1010 = 1
-          if xx == 5:
-              aa1010 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa1010 = 2
+          aa1= aa[1]
+          aa2= aa[2]
+          aa3= aa[3]
+          aa4= aa[4]
+          aa5= aa[5]
+          aa6= aa[6]
+          aa7= aa[7]
+          aa8= aa[8]
+          aa9= aa[9]
+          aa10= aa[10]
+          팀 = [1,1,1,1,1,2,2,2,2,2]
+          랜덤 = random.shuffle(팀)
           team = open('team.txt','w')
           for i in range (1):
+              team.write('-------------')
+              team.write('\n')
               team.write(str(aa1))
               team.write('\t')
-              team.write(str(aa11))
+              team.write(str(팀[0]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa2))
               team.write('\t')
-              team.write(str(aa22))
+              team.write(str(팀[1]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa3))
               team.write('\t')
-              team.write(str(aa33))
+              team.write(str(팀[2]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa4))
               team.write('\t')
-              team.write(str(aa44))
+              team.write(str(팀[3]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa5))
               team.write('\t')
-              team.write(str(aa55))
+              team.write(str(팀[4]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa6))
               team.write('\t')
-              team.write(str(aa66))
+              team.write(str(팀[5]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa7))
               team.write('\t')
-              team.write(str(aa77))
+              team.write(str(팀[6]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa8))
               team.write('\t')
-              team.write(str(aa88))
+              team.write(str(팀[7]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa9))
               team.write('\t')
-              team.write(str(aa99))
+              team.write(str(팀[8]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa10))
               team.write('\t')
-              team.write(str(aa1010))
+              team.write(str(팀[9]))
               team.write("팀")
+              team.write('\n')
+              team.write('-------------')
           team.close()
           flie = open('team.txt')
-          await message.channel.send('-------------------------')
           await message.channel.send(flie.read())
-          await message.channel.send('-------------------------')
           flie.close()    
       except:
-          await message.channel.send("이름을 테스트 옆에 한 명씩 띄어 적어 주세요.(10명만 적어 주세요)")
+          await message.channel.send("이름을 !팀설정 옆에 10명 띄어 적어주세요(팀설정 1 2 3 ...)")
           return
 
 
-
-
-
-  if message.content == ('팀 재설정'):
-          zz = 0
-          xx = 0
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa11 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa11 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa22 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa22 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa33 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa33 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa44 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa44 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if 랜덤 == 1:
-              zz = zz + 1
-              aa55 = 1
-          if 랜덤 == 2:
-              xx = xx + 1
-              aa55 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa66 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa66 = 1
-          if xx == 5:
-              aa66 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa66 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa77 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa77 = 1
-          if xx == 5:
-              aa77 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa77 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa88 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa88 = 1
-          if xx == 5:
-              aa88 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa88 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa99 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa99 = 1
-          if xx == 5:
-              aa99 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa99 = 2
-          팀 = [1,2]
-          랜덤 = random.choice(팀)
-          print(랜덤)
-          print(zz)
-          print(xx)
-          if zz == 5:
-              aa1010 = 2
-          elif 랜덤 == 1:
-              zz = zz + 1
-              aa1010 = 1
-          if xx == 5:
-              aa1010 = 1
-          elif 랜덤 == 2:
-              xx = xx + 1
-              aa1010 = 2
+  if message.content==("팀 재설정"):
+          팀 = [1,1,1,1,1,2,2,2,2,2]
+          랜덤 = random.shuffle(팀)
           team = open('team.txt','w')
           for i in range (1):
+              team.write('-------------')
+              team.write('\n')
               team.write(str(aa1))
               team.write('\t')
-              team.write(str(aa11))
+              team.write(str(팀[0]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa2))
               team.write('\t')
-              team.write(str(aa22))
+              team.write(str(팀[1]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa3))
               team.write('\t')
-              team.write(str(aa33))
+              team.write(str(팀[2]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa4))
               team.write('\t')
-              team.write(str(aa44))
+              team.write(str(팀[3]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa5))
               team.write('\t')
-              team.write(str(aa55))
+              team.write(str(팀[4]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa6))
               team.write('\t')
-              team.write(str(aa66))
+              team.write(str(팀[5]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa7))
               team.write('\t')
-              team.write(str(aa77))
+              team.write(str(팀[6]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa8))
               team.write('\t')
-              team.write(str(aa88))
+              team.write(str(팀[7]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa9))
               team.write('\t')
-              team.write(str(aa99))
+              team.write(str(팀[8]))
               team.write("팀")
               team.write('\n')
               team.write(str(aa10))
               team.write('\t')
-              team.write(str(aa1010))
+              team.write(str(팀[9]))
               team.write("팀")
+              team.write('\n')
+              team.write('-------------')              
           team.close()
           flie = open('team.txt')
-          await message.channel.send('-------------------------')
           await message.channel.send(flie.read())
-          await message.channel.send('-------------------------')
-          flie.close() 
+          flie.close()
 
   if message.content == ('팀 설정'):
         global z, s, d
