@@ -11,6 +11,6 @@ bot = commands.Bot (command_prefix='prefix')
 
 @bot.command()
 async def q():
-    await auther.message.channel.send('q')
+    await message.channel.send('q')
 
 bot.run(os.environ['token'])
